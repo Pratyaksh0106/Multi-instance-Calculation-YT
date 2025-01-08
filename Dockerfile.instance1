@@ -1,0 +1,16 @@
+FROM python:3.8-slim
+
+# Set the working directory
+WORKDIR /app
+
+# Install dependencies
+RUN pip install --no-cache-dir flask requests
+
+# Copy the Python script into the container
+COPY instance1.py /app/
+
+# Expose Flask port
+EXPOSE 5000
+
+# Run the Python script when the container starts
+CMD ["python", "instance1.py"]

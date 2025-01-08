@@ -1,0 +1,44 @@
+version: '3'
+
+services:
+  instance1:
+    build:
+      context: .
+      dockerfile: Dockerfile.instance1
+    ports:
+      - "5001:5000"
+
+  instance2:
+    build:
+      context: .
+      dockerfile: Dockerfile.instance2
+    ports:
+      - "5002:5000"
+
+  instance3:
+    build:
+      context: .
+      dockerfile: Dockerfile.instance3
+    ports:
+      - "5003:5000"
+
+  instance4:
+    build:
+      context: .
+      dockerfile: Dockerfile.instance4
+    ports:
+      - "5004:5000"
+
+  instance5:
+    build:
+      context: .
+      dockerfile: Dockerfile.instance5
+    ports:
+      - "5005:5000"
+
+  instance6:
+    build:
+      context: .
+      dockerfile: Dockerfile.instance6
+    ports:
+      - "5006:5000"

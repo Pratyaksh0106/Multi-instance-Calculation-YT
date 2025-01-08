@@ -1,0 +1,17 @@
+# Use a Python base image
+FROM python:3.8-slim
+
+# Set a working directory
+WORKDIR /app
+
+# Copy the Python script into the container
+COPY instance6.py /app/
+
+# Install required Python packages
+RUN pip install --no-cache-dir flask boto3
+
+# Expose the port the app will run on
+EXPOSE 5000
+
+# Command to run the application
+CMD ["python", "instance6.py"]
